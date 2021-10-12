@@ -2,7 +2,7 @@
 
 .topbar {
     width: 100%;
-    height: 70px;
+    height: 80px;
     background-color: white;
     color: $mainColor;
     position: fixed;
@@ -20,6 +20,7 @@
         .left {
             display: flex;
             align-items: center;
+            
 
             .logo {
                 font-size: 40px;
@@ -27,6 +28,7 @@
                 text-decoration: none;
                 color: inherit;
                 margin-right: 40px;
+                font-family: 'Nunito', sans-serif; 
             }
 
         .itemContainer {
@@ -48,6 +50,8 @@
 
         .right{
 
+            scrollbar-width: none;
+
             .hamburger{
                 width: 32px;
                 height: 25px;
@@ -55,6 +59,7 @@
                 flex-direction: column;
                 justify-content: space-between;
                 cursor: pointer;
+                
 
                 span{
                     width: 100%;
@@ -62,6 +67,7 @@
                     background-color: $mainColor;
                     transform-origin: left;
                     transition: all 2s ease;
+                    
                 }
             }
         }  
@@ -70,6 +76,7 @@
     &.active{
         background-color: $mainColor;
         color: white;
+        
 
         .hamburger{
             span{
