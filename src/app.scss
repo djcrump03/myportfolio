@@ -3,13 +3,14 @@
 
     .sections {
         width: 100%;
-        height: calc(100vh - 70px);
+        height: calc(100vh - 10px);
         background-color: lightsalmon;
         position: relative;
-        top: 0px;
+        top: 10px;
         scroll-behavior: smooth;
         scroll-snap-type: y mandatory;
         scrollbar-width: none;
+        
         &::-webkit-scrollbar{
             display: none;
         }
@@ -19,7 +20,7 @@
 
         > * {
             width: 100%;
-            height: calc(100vh - 70px);
+            height: calc(100vh - 5px);
             scroll-snap-align: start;
         }
     }
