@@ -62,6 +62,7 @@ export default function Portfolio() {
       }, [selected]);
     return (
         <div className="portfolio" id="portfolio">
+          
             <h1>Portfolio</h1>
             <ul>
                 {list.map((item)=>(
@@ -73,6 +74,7 @@ export default function Portfolio() {
                     />
                 ))}
                 </ul>
+                
            
          <div className="container"> 
          {data.map((d) => (
