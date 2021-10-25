@@ -7,6 +7,7 @@ import Contact from "./components/contact/Contact";
 import "./app.scss";
 import Menu from "./components/menu/Menu";
 import { useState } from "react";
+// import axios from "axios";
 
 function App() {
     const [menuOpen, setMenuOpen] = useState(true)
