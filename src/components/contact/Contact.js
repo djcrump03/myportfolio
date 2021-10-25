@@ -3,7 +3,8 @@ import { useState } from "react";
 import "./contact.scss";
 import { useFormik } from "formik";
 import * as yup from "yup";
-import { FieldContainer, FieldError } from "./ContactStyles";
+import { FieldContainer, FieldError, SubmitButton,  } from "./ContactStyles";
+
 
 
 const validationSchema = yup.object({
@@ -31,23 +32,24 @@ export default function Contact() {
 
 console.log("error:", formik.errors)
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setMessage(true);
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   setMessage(true);
+  // };
   return (
     <div className="contact" id="contact">
       <div className="left">
         <img src="assets/handshake.png" alt="" />
       </div>
       <div className="right">
-        <h2>Contact.</h2>
+        <h2>Contact</h2>
         <form onSubmit={formik.handleSubmit}>
           <FieldContainer>
           <input name="fullName" 
           placeholder="Full Name" 
           value={formik.values.fullName} 
           onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
           />
            <FieldError>
              {formik.touched.fullName && formik.errors.fullName
@@ -60,6 +62,7 @@ console.log("error:", formik.errors)
           placeholder="Email"
            value={formik.values.email}
            onChange={formik.handleChange}
+           onBlur={formik.handleBlur}
             />
             <FieldError>
             {formik.touched.email && formik.errors.email
@@ -67,10 +70,10 @@ console.log("error:", formik.errors)
               : ""}
           </FieldError>
           </FieldContainer>
-          
           <textarea placeholder="Message"></textarea>
-          <button type="submit">Send</button>
+          <button type="submit" disabled={!formik.isValid}>Send</button>
           {message && <span>Thanks, I'll reply ASAP :)</span>}
+        
         </form>
       </div>
     </div>

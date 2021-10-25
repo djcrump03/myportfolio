@@ -37,7 +37,7 @@
     justify-content: center;
 
     h2 {
-      font-size: 30px;
+      font-size: 50px;
     }
 
     form {
@@ -47,11 +47,18 @@
       flex-direction: column;
       align-items: center;
       justify-content: space-around;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400px;
+      
+    
 
-      input {
+      input  {
         width: 300px;
         height: 30px;
         font-size: 14px;
+        
+        
+         
 
         @include mobile {
           width: 200px;
@@ -63,6 +70,7 @@
         width: 300px;
         height: 200px;
         font-size: 14px;
+        
 
         @include mobile {
           width: 200px;
@@ -74,7 +82,7 @@
         width: 150px;
         height: 30px;
         color: white;
-        background-color: crimson;
+        background-color: rgb(39, 10, 117);
         border: none;
         border-radius: 10px;
         font-weight: 500;
